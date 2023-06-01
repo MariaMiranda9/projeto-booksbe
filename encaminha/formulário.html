@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="formulário.css">
+    <script src="formulario.js"></script>
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <p>Preencha este formuláriopara nos ajudar:</p>
+    <br>
+    <form name="submit-to-google-sheet1">
+        <h2>Qual seu gênero de livro favorito?</h2>
+        <select name="genero">
+            <option value="Romance">Românce</option>
+            <option value="Ficçao">Ficção</option>
+            <option value="Terror">Terror</option>
+            <option value="Poesia">Poesia</option>
+            <option value="Filosofia">Filosofia</option>
+            <option value="Acao">Ação</option>
+            <option value="Comedia">Comédia</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Suspense">Suspense</option>
+            <br>
+        </select>
+
+        <h2>Você gostaria de receber notificações de novas resenhas?</h2>
+        <input name="sim" type="checkbox" value="sim" id="sim">
+        <label name="sim" for="sim">
+            Sim.
+        </label>
+
+        <input name="não" type="checkbox" value="não" id="não">
+        <label name="não" for="não">
+            Não.
+        </label>
+
+
+        <h2>Você gostaria de receber biografias de novos autores?</h2>
+        <input name="pesquisa-sim" type="radio" value="sim" id="pesquisa-sim">
+        <label name="pesquisa-sim" for="pesquisa-sim">
+            Sim.
+        </label>
+
+        <input name="pesquisa-não" type="radio" value="não" id="pesquisa-nao">
+        <label name="pesquisa-não" for="pesquisa-nao">
+            Não.
+        </label>
+        <br>
+        <h2>Gostaria que repetisse a notificação quantas vezes?</h2>
+        <input name="vezes" type="checkbox" id="inlineCheckbox1" value="0">
+        <label name="vezes" for="inlineCheckbox1">0 vezes</label>
+        <input name="vezes" type="checkbox" id="inlineCheckbox1" value="1a3">
+        <label name="vezes" for="inlineCheckbox1">1 a 3 vezes</label>
+        <input name="vezes" type="checkbox" id="inlineCheckbox1" value="3a7">
+        <label name="vezes" for="inlineCheckbox1">3 a 7 vezes</label>
+        <input name="vezes" type="checkbox" id="inlineCheckbox1" value="7">
+        <label name="vezes" for="inlineCheckbox1">Acima de 7 vezes</label>
+        <br>
+        <h2>Deixe aqui sua sugestão sobre nosso site.</h2>
+        <input name="sugestao" type="text" placeholder="Mensagem">
+        <button type="submit">Enviar</button>
+
+
+    </form>
+
+    <script>
+        const scriptURL = 'https://docs.google.com/spreadsheets/d/10J59ab28elVyABWw-GfGrBD556FfhDFORfylQ019z8k/edit?hl=pt-br#gid=0'
+        const form = document.forms['submit-to-google-sheet1']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Sucess!', response))
+                .catch(error => console.error('Error!', error.message))
+            form.reset();
+        })
+    </script>
+
+
+
+</body>
+
+</html>

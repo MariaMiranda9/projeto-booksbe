@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>BooksBe</title>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+	<link rel="stylesheet" href="P-style.css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<script src="P-script.js" defer></script>
+	<script src="tracaimgs.js"></script>
+	<script src="pesquisa.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<input class="pesquisa" type="text" name="pesquisa" value="pesquisa" required>
+
+		<h1>BooksBe</h1>
+
+		<div id="menu-bar">
+			<div id="menu" onclick="onClickMenu()">
+				<div id="bar1" class="bar"></div>
+				<div id="bar2" class="bar"></div>
+				<div id="bar3" class="bar"></div>
+			</div>
+			<ul class="nav" id="nav">
+				<li><a href="encaminha/login.html">👤Login</a></li>
+				<li><a href="encaminha/sobre.html">Sobre nós</a></li>
+
+			</ul>
+		</div>
+		<div class="menu-bg" id="menu-bg"></div>
+
+		<div class="all">
+			<div class="buttons">
+				<div class="dropdown">
+					<button class="dropbtn">Recomendações</button>
+					<div class="dropdown-content">
+						<a href="Recomendações/Românce/index.html">Romance</a>
+						<a href="Recomendações/Terror/index.html">Terror</a>
+						<a href="Recomendações/Ficção/index.html">Ficção</a>
+						<a href="Recomendações/Poesia/index.html">Poesia</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<div class="dropdown">
+					<button class="dropbtn">Populares</button>
+					<div class="dropdown-content">
+						<a href="Populares/Harry Potter/index.html">Harry Potter</a>
+						<a href="Populares/A Maldição do Tigre/index.html">A Maldição do Tigre</a>
+						<a href="Populares/Orgulho e Preconceito/index.html">Orgulho e Preconceito</a>
+						<a href="Populares/Pequeno Principe/index.html">o Pequeno principe</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<div class="dropdown">
+					<button class="dropbtn">Autores</button>
+					<div class="dropdown-content">
+						<a href="Autores/Willian Shakespeare/index.html">Willian Shakespeare</a>
+						<a href="Autores/PaulaP/index.html">Paula Pimenta</a>
+						<a href="Autores/ThalitaR/index.html">Thalita Rebousas</a>
+						<a href="Autores/Machado de Assis/index.html">Machado de Assis</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</header>
+
+
+	<i id="teste" class="fa-solid fa-magnifying-glass"></i>
+
+
+	<div class="textos">
+		<h3 id="txt2">Sejam muito bem vindos ao</h3>
+		<h1 id="txt1">BooksBe</h1>
+		<h3 id="txt2">O maior site amador de resenhas de livros!</h3>
+		<h1></h1>
+	</div>
+
+
+	<div class="carrosel">
+		<div class="imgs">
+			<img id="img">
+		</div>
+	</div>
+
+	<footer>
+
+		<!--links da barra nav-->
+		<div class="nav_rdp">
+			<a href="#" class="link_rdp" onclick="window.prompt('Digite a sua Reclamação')">Reclamação</a>
+		</div>
+		<div class="ftext">
+			<h1 class="title_rdp">Booksbe</h1>
+
+
+
+			<p class="txt_rdp">Suas resenhas favoritas!</p>
+
+
+			<h4> BooksBe, By Isabella Silva &copy;</h4>
+
+		</div>
+
+		<div class="popup">
+			<div class="notification">
+				<p>Seja bem vindo! </p>
+				<span class="notification_progress"></span>
+			</div>
+
+			<div class="notification2">
+				<p>Participe da <a href="#">Pesquisa de satisfação</a> </p>
+				<span class="notification_progress"></span>
+			</div>
+		</div>
+
+
+
+
+	</footer>
+
+</body>
+
+
+
+
+</html>

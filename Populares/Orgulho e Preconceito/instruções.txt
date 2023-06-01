@@ -1,0 +1,7 @@
+1- criar uma div central
+2- criar duas divs dentro dessa, uma contendo a imagem e as resenhas e a outra o resumo
+3- (css) div central{
+    display: flex;
+    flex-direction: column;
+    column-count: 2;
+}
